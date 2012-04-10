@@ -48,9 +48,9 @@ else:
     def dx_schedule_indexer(context):
         date = context.feedSchedule
         return DateTime(
-            date.year,
-            date.month,
-            date.day
+            date.year(),
+            date.month(),
+            date.day()
             )
 
     @indexer(IDexterityContent)
