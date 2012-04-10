@@ -47,11 +47,20 @@ else:
     @indexer(IDexterityContent)
     def dx_schedule_indexer(context):
         date = context.feedSchedule
-        return DateTime(
-            date.year(),
-            date.month(),
-            date.day()
-            )
+        # in a mized AT/dexterity environment context.feedSchedule can be both a datetime and a DateTime from the 
+        # parent item via acquisition
+        try:
+            return DateTime(
+                date.year,
+                date.month,
+                date.day
+                )
+        except DateError:
+            return DateTime(
+                date.year(),
+                date.month(),
+                date.day()
+                )
 
     @indexer(IDexterityContent)
     def dx_feed_indexer(context):
