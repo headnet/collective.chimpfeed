@@ -8,6 +8,7 @@ from plone.indexer.decorator import indexer
 from Products.Archetypes import atapi
 from Products.Archetypes.interfaces import IBaseContent
 from DateTime import DateTime
+from DateTime.interfaces import DateError
 
 from collective.chimpfeed.permissions import MODERATE_PERMISSION
 from collective.chimpfeed.interfaces import IFeedControl
