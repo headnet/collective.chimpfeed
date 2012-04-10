@@ -47,7 +47,7 @@ else:
     @indexer(IDexterityContent)
     def dx_schedule_indexer(context):
         date = context.feedSchedule
-        # in a mized AT/dexterity environment context.feedSchedule can be both a datetime and a DateTime from the 
+        # in a mized AT/dexterity environment context.feedSchedule can be both a datetime.date and a DateTime from the 
         # parent item via acquisition
         try:
             return DateTime(
