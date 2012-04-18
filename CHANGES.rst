@@ -1,6 +1,19 @@
 Changes
 =======
 
+1.5.1 (2012-04-18)
+------------------
+
+Bugfixes:
+
+- Fixed issue where the Archetypes schema extender would replace
+  existing fields (if using the same names), for example
+  ``"feeds"``.
+
+  Instead, the extender now ignores such content types (a warning is
+  logged).
+
+
 1.5 (2012-04-11)
 ----------------
 
@@ -12,6 +25,7 @@ Bugfixes:
 
 - Fixed issue where subscription using first name only (single name,
   when split on space) would cause an exception.
+
 
 1.4 (2012-03-27)
 ----------------
